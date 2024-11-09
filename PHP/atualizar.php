@@ -2,9 +2,7 @@
   include('conectar.php');
   include('selecionar.php');
 
-  if (isset($_GET['ID'])) {
-    $id = $_GET['ID'];
-  }
+  $id = $_GET['id'];
 
   $select_editar = "
     SELECT P.Nome AS Nome

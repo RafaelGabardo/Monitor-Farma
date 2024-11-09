@@ -46,10 +46,10 @@
                   <td>' . $row['Fornecedor'] . '</td>
                   <td>' . $row['Quantidade'] . '</td>
                   <td>
-                    <a href="editar.php?' . $row['ID'] . '" class="btn btn-warning" role="button">Editar</a>
+                    <a id="' . $row['ID'] . '" href="editar.php?id=' . $row['ID'] . '" class="btn btn-warning" role="button">Editar</a>
                   </td>
                   <td>
-                    <button class="btn btn-outline-danger">Deletar</button>
+                    <a id="' . $row['ID'] . '" href="deletar.php?id=' . $row['ID'] . '" class="btn btn-outline-danger" role="button">Deletar</a>
                   </td>
                 </tr>
               ';
@@ -62,4 +62,3 @@
 </body>
 </html>
 
-<!-- id="' . $row['ID'] . '"  -->
