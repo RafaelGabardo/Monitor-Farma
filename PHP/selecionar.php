@@ -1,7 +1,7 @@
 <?php
   include('conectar.php');
 
-  $select_crud = "
+  $select_crud_produto = "
     SELECT 
       P.ID_Prod AS ID,
       P.Nome AS Produto,
@@ -24,9 +24,9 @@
       P.ID_Prod;
   ";
 
-  $resultado_crud = mysqli_query($conectar, $select_crud);
+  $resultado_crud_produto = mysqli_query($conectar, $select_crud_produto);
 
-  if (!$resultado_crud) {
+  if (!$resultado_crud_produto) {
     die('Deu ruim!');
   }
 
@@ -38,6 +38,14 @@
   $resultado_atualizar = mysqli_query($conectar, $select_atualizar);
 
   if (!$resultado_atualizar) {
+    die('Deu ruim');
+  }
+
+  $select_crud_fornecedor = "SELECT * FROM Fornecedor";
+
+  $resultado_crud_fornecedor = mysqli_query($conectar, $select_crud_fornecedor);
+
+  if (!$resultado_crud_fornecedor) {
     die('Deu ruim');
   }
 ?>

@@ -1,5 +1,5 @@
 <?php
-  include('./PHP/atualizar.php');
+  include('./PHP/atualizar_produto.php');
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
           }
         ?>
         </h4>
-        <form action="crud.php" method="post">
+        <form action="#" method="post">
           <label class="form-label" for="nome">Nome:</label><br>
           <input class="form-control" type="text" name="nome" id="nome"><br>
           <label class="form-label" for="preco">Preço:</label><br>

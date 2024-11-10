@@ -16,14 +16,14 @@
   }
 
   if (isset($_POST['submit'])) {
-    $deletar = "
+    $deletar_produto = "
       DELETE FROM Produto
       WHERE ID_Prod = '$id'
     ";
 
-    $delecao = mysqli_query($conectar, $deletar);
+    $delecao_produto = mysqli_query($conectar, $deletar_produto);
 
-    if (!$delecao) {
+    if (!$delecao_produto) {
       die('Deu ruim');
     }
   }

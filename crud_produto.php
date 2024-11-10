@@ -1,5 +1,4 @@
 <?php
-  include('./PHP/conectar.php');
   include('./PHP/selecionar.php');
 ?>
 
@@ -9,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Admin</title>
+  <title>Produtos</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg" style="background-color: #094343;">
@@ -34,8 +33,8 @@
       </thead>
       <tbody>
         <?php
-          if (mysqli_num_rows($resultado_crud) > 0) {
-            while ($row = mysqli_fetch_assoc($resultado_crud)) {
+          if (mysqli_num_rows($resultado_crud_produto) > 0) {
+            while ($row = mysqli_fetch_assoc($resultado_crud_produto)) {
               echo '
                 <tr>
                   <td scope="row">' . $row['ID'] . '</td>
@@ -46,10 +45,10 @@
                   <td>' . $row['Fornecedor'] . '</td>
                   <td>' . $row['Quantidade'] . '</td>
                   <td>
-                    <a id="' . $row['ID'] . '" href="editar.php?id=' . $row['ID'] . '" class="btn btn-warning" role="button">Editar</a>
+                    <a id="' . $row['ID'] . '" href="editar_produto.php?id=' . $row['ID'] . '" class="btn btn-warning" role="button">Editar</a>
                   </td>
                   <td>
-                    <a id="' . $row['ID'] . '" href="deletar.php?id=' . $row['ID'] . '" class="btn btn-outline-danger" role="button">Deletar</a>
+                    <a id="' . $row['ID'] . '" href="deletar_produto.php?id=' . $row['ID'] . '" class="btn btn-outline-danger" role="button">Deletar</a>
                   </td>
                 </tr>
               ';

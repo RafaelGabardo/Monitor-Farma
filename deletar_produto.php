@@ -1,5 +1,5 @@
 <?php
-  include('./PHP/deletar_php.php');
+  include('./PHP/deletar_produto_php.php');
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +21,13 @@
           }
         }
       ?>
-    ?
+    ? (Clique 2 vezes e depois retorne para crud_produto.php)
     </h1>
     <div class="card alert alert-danger border-0 d-flex align-items-center justify-content-center">
       <div class="card-body">
-        <form action="crud.php" method="post">
+        <form action="#" method="post">
           <input class="btn btn-danger p-5" type="submit" name="submit" id="submit" value="Sim">
-          <a href="crud.php" class="btn btn-success mx-5 p-5">Não</a>
+          <a href="crud_produto.php" class="btn btn-success mx-5 p-5">Não</a>
         </form>
       </div>
     </div>
